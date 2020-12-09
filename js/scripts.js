@@ -48,16 +48,16 @@
   });
 
   // Contact Form
-  let contact = $('#contact');
-  let createForm = $('<form action="POST" data-netlify="true" id="contact-form">\
-    <h2>Contact Me</h2>\
-    <p><label>Name:</label> <input name="name" type="text" /></p>\
-    <p><label>Email Address:</label> <input name="email" type="email" /></p>\
-    <p><label>Message:</label>  <textarea name="message"></textarea> </p>\
-    <p><div data-netlify-recaptcha="true"></div></p>\
-    <p><button type="submit" value="Send" style="cursor: pointer;">Send</button></p>\
-    </form>');
-  contact.append(createForm);
+  // let contact = $('#contact');
+  // let createForm = $('<form action="POST" data-netlify="true" id="contact-form">\
+  //   <h2>Contact Me</h2>\
+  //   <p><label>Name:</label> <input name="name" type="text" /></p>\
+  //   <p><label>Email Address:</label> <input name="email" type="email" /></p>\
+  //   <p><label>Message:</label>  <textarea name="message"></textarea> </p>\
+  //   <p><div data-netlify-recaptcha="true"></div></p>\
+  //   <p><button type="submit" value="Send" style="cursor: pointer;">Send</button></p>\
+  //   </form>');
+  // contact.append(createForm);
   
   // Validate Form
   const constraints = {
