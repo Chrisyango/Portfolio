@@ -13,7 +13,7 @@ Colors
 */
 
 /* Basic Styles */
-body{background:#fff;font-family:'Raleway',sans-serif;font-size:18px;line-height:1.6;color:#212121;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-text-size-adjust:100%;margin:0}
+body{background:#fff;font-family:'Raleway',sans-serif;font-size:16px;line-height:1.6;color:#212121;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-text-size-adjust:100%;margin:0}
 h1,
 h2,
 h3,
@@ -27,18 +27,20 @@ header{position:fixed;top:0;right:-56px;bottom:0;z-index:1;width:56px;background
 nav{height:100%}
 #nav{display:flex;flex-direction:column;justify-content:space-between;flex-wrap:wrap;align-items:center;align-content:center;height:100%;margin:0;padding:0}
 #nav li{position:relative;display:block;height:33.33%;width:100%;transform:rotate(90deg)}
-#nav li a{position:absolute;top:50%;transform:translateY(-50%);display:block;text-decoration:none;color:#fff;transition:0.3s}
+#nav li a{position:absolute;top:50%;transform:translateY(-50%);display:block;text-decoration:none;color:#fff;transition:0.3s;font-size:20px}
 #nav li a:hover{color:#757575}
 
 /* Navigation Items */
 #nav-items{position:fixed;top:0;left:0;right:0;bottom:0;z-index:-1;overflow:hidden}
-#nav-container{position:absolute;top:0;bottom:0;right:-45vw;z-index:1;width:45vw;transition:1s;background:#fff}
+#nav-container{position:absolute;top:0;bottom:0;right:-45vw;z-index:1;width:45vw;background:none}
 .nav-item{position:relative;z-index:-1}
 #close-nav{position:absolute;top:57px;right:15px;width:36px;height:36px}
 
-#about{display:none}
+#about{display:none;height:calc(100% - 100px);padding:50px 100px;background:#fff}
+#about h2{font-size:30px}
+.about-img{position:absolute;bottom:0;left:0;z-index:-1;width:500px;height:281px}
 
-#work{display:none;overflow:scroll;height:calc(100% - 100px);-ms-overflow-style:none;scrollbar-width:none;padding:50px 100px}
+#work{display:none;overflow:scroll;height:calc(100% - 100px);-ms-overflow-style:none;scrollbar-width:none;padding:50px 100px;background:#C5CAE9}
 #work::-webkit-scrollbar{display:none}
 #work h2{font-size:30px}
 #works-container{display:flex;flex-direction:row;justify-content:space-between;flex-wrap:wrap;align-items:center;align-content:center;height:auto;margin:30px -15px 0}
@@ -49,7 +51,20 @@ nav{height:100%}
 .work-container:hover .work-img{transform:scale(1.025)}
 .work-container:hover .work-img:after{opacity:0.7}
 
-#contact{display:none}
+#contact{display:none;background:#fff9f0;height:calc(100% - 100px);padding:50px 100px}
+#contact h2{font-size:30px;margin:0 0 30px}
+#contact>div:first-of-type{display:flex;flex-direction:row;justify-content:space-between;flex-wrap:wrap;align-items:center;align-content:center;width:50%;float:left}
+#contact>div>a{width:100%;margin:0 0 15px}
+#contact>div a{color:#212121;text-decoration:none;}
+#contact div div a{margin:0 15px 0 0}
+#contact form{display:flex;flex-direction:row;justify-content:space-between;flex-wrap:wrap;align-items:center;align-content:center;width:50%;float:right;margin:0 0 50px}
+#name{background:none;border:none;border-bottom:1px solid #BDBDBD;display:block;width:45%}
+#email{background:none;border:none;border-bottom:1px solid #BDBDBD;display:block;width:45%}
+#message{background:none;border:none;border-bottom:1px solid #BDBDBD;display:block;width:100%;margin:15px 0;font-family:'Raleway',sans-serif;height:100px}
+#submit{background:none;border:none;font-family:'Raleway',sans-serif;margin:0 auto;cursor:pointer}
+#name:focus, #email:focus, #message:focus{outline:none;border-bottom:1px solid #000}
+#name::placeholder, #email::placeholder, #message::placeholder{font-family:'Raleway',sans-serif;color:#212121}
+#mail-img{display:block;margin:0 auto;width:500px;height:300px;clear:both}
 
 /* Slider */
 #slider{position:relative;height:75vh;padding:0 30px;padding-right:86px;background:#607D8B;overflow:hidden}
@@ -87,4 +102,4 @@ nav{height:100%}
 .project-container:hover .project-img:after{opacity:0.7}
 
 /* Footer */
-footer span{display:block;background:#303F9F;padding:15px;padding-right:71px;text-align:center;font-size:16px;color:#fff}
+footer span{display:block;background:#303F9F;padding:15px;padding-right:71px;text-align:center;color:#fff}

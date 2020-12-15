@@ -12,23 +12,26 @@
     });
   });
 
-  // Navigation onClick open the selected option
+  // Navigation on click open the selected option
   let navContainer = $("#nav-container");
   let navItems = $("#nav-items");
   let overlay = $("#overlay");
+
   $('#nav li a').click(function(){
     event.preventDefault();
+    let liNumber = $(this).parent().index();
     let currentPosition = $(window).scrollTop();
     $(window).scroll(function() {
         $(window).scrollTop(currentPosition);
     });
+    navContainer.find('.nav-item').eq(liNumber).css('display', 'block');
     navItems.css('z-index', '1');
-    navContainer.css('right', '0');
     overlay.css("background", 'rgba(0,0,0,0.5)');
+    navContainer.animate({"right": '0'}, 1000);
   });
 
   function closeNav() {
-    navContainer.css('right', '-50vw');
+    navContainer.animate({"right": '-50vw'}, 1000);
     overlay.css("background", 'rgba(0,0,0,0)');
     $(window).off('scroll');
     setTimeout(function() {
@@ -40,11 +43,6 @@
   $('#close-nav, #overlay').click(function() {
     event.preventDefault();
     closeNav();
-  });
-
-  $('#nav li').click(function() {
-    let liNumber = $(this).index();
-    navContainer.find('.nav-item').eq(liNumber).css('display', 'block');
   });
   
   // Validate Form

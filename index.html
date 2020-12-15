@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta id="viewport" name="viewport" content ="width=device-width" />
     <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/c6a762c4af.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/layout.css">
     <title>Chris Yang | Portfolio</title>
   </head>
@@ -30,7 +30,14 @@
       <div id="nav-container">
         <a href="./" id="close-nav" style="background:url('./images/close.png') center no-repeat;background-size:cover"></a>
         <section id="about" class="nav-item">
-          This is the about section
+          <h2>About Me</h2>
+          <p>
+            Heya! I'm Chris Yang and I'm a Front-End Web Developer based in Pontiac, Michigan.
+          </p>
+          <p>
+            I began coding in August of 2017. I'm constantly learning how to better my code everyday. I'm always learning something new and I'm able to pick up a new concept relatively easily. In my free time, you can find me watching YouTube, playing video games, or coding my next big project!
+          </p>
+          <div class="about-img" style="background:url('./images/person.gif') center no-repeat;background-size:cover;"></div>
         </section><!-- /#about -->
         <section id="work" class="nav-item">
           <h2>Works</h2>
@@ -54,13 +61,23 @@
           </div><!-- /#works-container -->
         </section><!-- /#work -->
         <section id="contact" class="nav-item">
-          <form action="POST" data-netlify="true" id="contact-form">
           <h2>Contact Me</h2>
-          <p><label>Name:</label> <input name="name" type="text" id="name" placeholder="Name" /></p>
-          <p><label>Email Address:</label> <input name="email" type="email" id="email" placeholder="Email" /></p>
-          <p><label>Message:</label>  <textarea name="message" id="message" placeholder="Message" ></textarea> </p>
-          <p><input type="submit" value="Send"></input></p>
+          <div>
+            <a href="mailto:cyang287@yahoo.com">cyang287@yahoo.com</a>
+            <a href="tel:2484644640">248-464-4640</a>
+            <div>
+              <a href="https://www.linkedin.com/in/chrisyango/"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://github.com/Chrisyango"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <form action="POST" data-netlify="true" id="contact-form">
+            <input name="name" type="text" id="name" placeholder="Name *" aria-label="Name"/>
+            <input name="email" type="email" id="email" placeholder="Email *" aria-label="Email"/>
+            <textarea name="message" id="message" placeholder="Message" aria-label="Message"></textarea>
+            <input id="submit" type="submit" value="Send"></input>
           </form>
+          <div id="mail-img" style="background:url('./images/mail.gif') center no-repeat;background-size:cover;"></div>
+          <!-- <img src="./images/mail.gif" alt="Mail"> -->
         </section><!-- /#contact -->
       </div><!-- /#nav-container -->
     </section><!-- /#nav-items -->
@@ -102,6 +119,7 @@
     </footer>
 
     <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
     <script src="js/validate.js/validate.min.js"></script>
     <script src="js/scripts.js"></script>
   </body>
