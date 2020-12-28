@@ -17,7 +17,7 @@
   let navItems = $("#nav-items");
   let overlay = $("#overlay");
 
-  $('#nav li a').click(function(){
+  $('#nav li a').click(function(event){
     event.preventDefault();
     let liNumber = $(this).parent().index();
     let currentPosition = $(window).scrollTop();
@@ -31,7 +31,13 @@
   });
 
   function closeNav() {
-    navContainer.animate({"right": '-50vw'}, 1000);
+
+    if ($(window).width() > 991) {
+      navContainer.animate({"right": '-50vw'}, 1000);
+    }
+    else {
+      navContainer.animate({"right": '-100vw'}, 1000);
+    }
     overlay.css("background", 'rgba(0,0,0,0)');
     $(window).off('scroll');
     setTimeout(function() {
@@ -40,7 +46,7 @@
     }, 1000);
   }
   
-  $('#close-nav, #overlay').click(function() {
+  $('#close-nav, #overlay').click(function(event) {
     event.preventDefault();
     closeNav();
   });
